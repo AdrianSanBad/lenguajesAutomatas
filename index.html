@@ -1,12 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            text-align: center;
+            background-color: #7FDCE3;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #000000;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        #logo {
+            width: 8%;
+        }
+
+        h1 {
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+            font-size: 50px;
+            margin-left: 100px;
+        }
+
+        article {
+            margin: 30px auto;
+            max-width: 50%;
+            padding: 2%;
+            text-align: justify;
+            background-color: #ffebcd;
+            box-shadow: 5px 5px 5px #000000;
+        }
+
+        #importancia {
+            max-width: 70%;
+
+        }
+
+        .botones {
+            border-radius: 5px;
+            padding: 5px;
+            background-color: #FFB94F;
+            color: rgb(0, 0, 0);
+        }
+
+        img {
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #fotoAdrian {
+            width: 100px;
+            border-radius: 50%;
+            margin: 5px;
+        }
+    </style>
+
+
+
 </head>
+
 <body>
-    <h2>Cambios</h2>
-    
+    <header>
+        <h1>Expresion regular</h1>
+        <img id="logo"
+            src="https://th.bing.com/th/id/R.0f6f0204e23317a6916cb0bf75ebeeb8?rik=rOmHlsvkFfDmkw&riu=http%3a%2f%2fvirtual.itpachuca.edu.mx%2fmoodle%2fpluginfile.php%2f1%2ftheme_moove%2fmarketing1icon%2f1630038787%2fLITP.png&ehk=qKk%2b48xrNGE%2b5hLDiN6Y7J2oPnyBqLMgFBLH6GEAt%2bo%3d&risl=&pid=ImgRaw&r=0"
+            alt="logo tecnologico de pachuca">
+    </header>
+
+    <main>
+        <nav>
+            <a class="botones" href="#queEs">¿Que es?</a>
+            <a class="botones" href="#importancia">Importancia</a>
+            <a class="botones" href="#casos">Casos de uso</a>
+        </nav>
+
+        <article id="queEs">
+            <h2>¿Que es?</h2>
+            <p>Una expresión regular es una secuencia de caracteres que define un patrón de búsqueda. Estas expresiones
+                regulares se utilizan para describir secuencias específicas de caracteres en documentos o cadenas de
+                texto. A menudo, su objetivo es modificar, buscar o reemplazar fragmentos de texto o líneas de código.
+            </p>
+
+        </article>
+        <img src="https://techdocs.akamai.com/cloudlets/img/capture_groups.jpeg" alt="expresion regular">
+
+        <article id="importancia">
+            <h2>Importancia</h2>
+            <p>Las expresiones regulares son una herramienta muy poderosa para buscar y manipular texto. Son una
+                característica común en muchos lenguajes de programación y herramientas de procesamiento de texto, y
+                proporcionan una forma poderosa y flexible de buscar y manipular texto. Las expresiones regulares son
+                especialmente útiles para buscar patrones de texto en grandes cantidades de texto, como archivos de
+                registro o archivos de configuración.</p>
+            <h2>Expresiones regulares más utilizadas</h2>
+            <ul>
+                <li><b>Blackslash o barra invertida: \</b><br>
+                    Se utiliza para escapar el siguiente carácter de la expresión de búsqueda de forma que este adquiera
+                    un significado especial o deje de tenerlo. Al utilizarlo por ejemplo en combinación con el punto
+                    “\.” este deja de tener su significado normal y se comporta como un carácter literal.</li>
+                <li><b>Pipe o barra: |</b><br>
+                    Sirve para indicar una de varias opciones. Por ejemplo la expresión regular (indexingdata|seo|sem)
+                    permitirá encontrar cualquiera de esas palabras.</li>
+                <li><b>Punto: .</b><br>
+                    El punto se interpreta como cualquier carácter, es decir, busca cualquier carácter o incluso un
+                    espacio SIN incluir los saltos de línea.</li>
+                <li><b>Asterisco: *</b><br>
+                    Sirve para encontrar algo que se encuentra repetido 0 o más veces. Su utilización más frecuente es
+                    junto al punto .* para indicar “cualquier cadena alfanumérica”.</li>
+                <li><b>Circunflejo: ^</b><br>
+                    Permite indicar cuál es el inicio de una cadena de texto.</li>
+                <li><b>Dólar: $</b><br>
+                    Permite indicar cuál es el final de una cadena de texto.</li>
+                <li><b>Paréntesis: ( )</b><br>
+                    Permiten agrupar una consulta, de manera que podamos construir partes de una RegEx mayor, o
+                    garantizar que no se mezclan las cadenas.</li>
+                <li><b>Corchetes: [ ]</b><br>
+                    Permiten indicar un intervalo de números o caracteres, de manera que cualquiera incluido en el
+                    intervalo valide la consulta.</li>
+                <li><b>Interrogación: ?</b><br>
+                    Indica que el carácter o cadena de delante del signo es opcional.</li>
+                <li><b>[abc] :</b> Uno de los caracteres” a”, “b”, o “c”</li>
+                <li><b>[^abc] :</b> Cualquier carácter menos: “a”, “b”, o “c”</li>
+                <li><b>[a-z] :</b> Cualquier minúscula entre la ”a” y la “z”</li>
+                <li><b>[0-9] :</b> Cualquier número entre el “0” y el “9”</li>
+                <li><b>[a-zA-Z] :</b> Cualquier mayúscula o minúscula entre la “aA” y la “zZ”</li>
+                <li><b>[a-zA-Z0-9-] :</b> Cualquier letra o número o el guión (ideal para URLs)</li>
+                <li><b>.* :</b> Lo de antes puede existir ninguna vez o más</li>
+                <li><b>.+ :</b> Lo de antes puede existir una vez o más</li>
+            </ul>
+        </article>
+        <img src="https://grow.leanmind.es/uploads/default/original/1X/c357b028eac2a1448d993bf279fff1363e5b1180.gif"
+            alt="ejemplo expresion regular">
+        <article>
+            <h2 id="casos">Casos de uso</h2>
+            <p>Las expresiones regulares se utilizan en muchos campos, como la programación, la minería de datos, la
+                extracción de información, la búsqueda de texto, la validación de datos, la manipulación de texto y la
+                sustitución de texto. Algunos ejemplos de casos de uso comunes incluyen:</p>
+            <ul>
+                <li>Validar un nombre de usuario.</li>
+                <li>Validar una dirección de correo electrónico.</li>
+                <li>Validar un número telefónico.</li>
+                <li>Encontrar urls en un texto.</li>
+                <li>Validar si un texto contiene caracteres especiales.</li>
+                <li>Validar las características de una contraseña, por ejemplo, que contenga números, mayúsculas,
+                    minusculas y caracteres especiales.</li>
+                <li>Encontrar palabras que empiecen con una letra en específico.</li>
+                <li>Validar una dirección IP.</li>
+                <li>Validar una fecha.</li>
+                <li>Encontrar números decimales en un texto.</li>
+                <li>Validar un código postal.</li>
+                <li>Validar un RFC.</li>
+            </ul>
+        </article>
+        <article>
+            <h2>Conclusión</h2>
+            <p>Las expresiones regulares son una herramienta muy poderosa para buscar y manipular texto. Son una
+                característica común en muchos lenguajes de programación y herramientas de procesamiento de texto, y
+                proporcionan una forma poderosa y flexible de buscar y manipular texto. Las expresiones regulares son
+                especialmente útiles para buscar patrones de texto en grandes cantidades de texto, como archivos de
+                registro o archivos de configuración.</p>
+            <h2>Referencias:</h2>
+            <ul>
+                <li><a href="https://4geeks.com/es/lesson/expresiones-regulares-python">Expresiones Regulares en Python:
+                        Domina
+                        la Potencia del Patrón de Búsqueda. (2023, junio 7). 4Geeks.
+                        https://4geeks.com/es/lesson/expresiones-regulares-python</a></li></br>
+                <li><a href="https://indexingdata.com/blog/analitica-web/guia-basica-expresiones-regulares">Guía Básica
+                        de
+                        Expresiones Regulares con Ejemplos. (s/f). Indexingdata.com. Recuperado el 18 de marzo de 2024,
+                        de
+                        https://indexingdata.com/blog/analitica-web/guia-basica-expresiones-regulares/</a></li></br>
+                <li><a
+                        href="https://es.stackoverflow.com/questions/604176/qu%c3%a9-es-una-expresi%c3%b3n-regular-y-para-qu%c3%a9-se-usa">¿Qué
+                        es una expresión regular y para qué se usa? (s/f). Stack Overflow en español. Recuperado el 18
+                        de marzo de
+                        2024, de
+                        https://es.stackoverflow.com/questions/604176/qu%c3%a9-es-una-expresi%c3%b3n-regular-y-para-qu%c3%a9-se-usa</a>
+                </li></br>
+                <li><a href="https://techdocs.akamai.com/cloudlets/docs/regex-cloudlets-rules">Regular expressions with
+                        Cloudlets rules. (s/f). Cloudlets. Recuperado el 18 de marzo de 2024, de
+                        https://techdocs.akamai.com/cloudlets/docs/regex-cloudlets-rules</a></li>
+            </ul>
+        </article>
+
+    </main>
+    <footer>
+        <img id="fotoAdrian"
+            src="https://avatars.githubusercontent.com/u/99064855?s=400&u=374179a7540aabd3a1e17fcb16261b920b0ee42d&v=4"
+            alt="foto adrian">
+        <div>
+            <p>Elaborado por: Adrian Sánchez Badillo</p>
+            <p>Tutor: Ing. Rodolfo Baume</p>
+            <p>Instituto Tecnológico de Pachuca</p>
+        </div>
+    </footer>
 </body>
+
 </html>
